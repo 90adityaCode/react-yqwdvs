@@ -33,7 +33,7 @@ const User = () => {
         -
       </button>
       <br/>
-     
+      <PostList />
     </>
   );
 };
