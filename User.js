@@ -2,21 +2,14 @@ import React, { useState, useEffect, useReducer } from "react";
 import UserList from "./UserList";
 import {Decrement, Increment, Initialize} from "./_actions/Count";
 import Reducer from "./_reducers/Reducer";
-
-const Hello = () => {
+import PostList from "./PostList";
+const User = () => {
   const initialState = 10;
   const [count, setCount] = useState(0);
   const [state, dispatch] = useReducer(Reducer, initialState);
   
-  // useEffect(()=>{
-  //    fetch()
-  //    .then(user =>{
-  //      console.log(user)
-  //    })
-  // },[])
   useEffect(() => {
-    document.title = count; 
-    // dispatch('Initialize');
+    document.title = count;  
     console.log("Mount!");
   }, []);
  
@@ -39,7 +32,9 @@ const Hello = () => {
       >
         -
       </button>
+      <br/>
+     
     </>
   );
 };
-export default Hello;
+export default User;
